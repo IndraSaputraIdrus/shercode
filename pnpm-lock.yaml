@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@lucia-auth/adapter-drizzle':
+    specifier: ^1.0.7
+    version: 1.0.7(lucia@3.1.1)
   better-sqlite3:
     specifier: ^9.4.5
     version: 9.4.5
@@ -16,7 +19,7 @@ dependencies:
     version: 2.1.0
   drizzle-orm:
     specifier: ^0.30.7
-    version: 0.30.7(better-sqlite3@9.4.5)
+    version: 0.30.7(@types/better-sqlite3@7.6.9)(better-sqlite3@9.4.5)
   formsnap:
     specifier: ^1.0.0
     version: 1.0.0(svelte@5.0.0-next.94)(sveltekit-superforms@2.12.2)
@@ -46,6 +49,9 @@ devDependencies:
   '@sveltejs/vite-plugin-svelte':
     specifier: ^3.0.2
     version: 3.0.2(svelte@5.0.0-next.94)(vite@5.2.8)
+  '@types/better-sqlite3':
+    specifier: ^7.6.9
+    version: 7.6.9
   '@types/eslint':
     specifier: ^8.56.7
     version: 8.56.7
@@ -151,7 +157,6 @@ packages:
     requiresBuild: true
     dependencies:
       tslib: 2.6.2
-    dev: true
     optional: true
 
   /@emnapi/runtime@0.45.0:
@@ -167,7 +172,6 @@ packages:
     requiresBuild: true
     dependencies:
       tslib: 2.6.2
-    dev: true
     optional: true
 
   /@esbuild-kit/core-utils@3.3.2:
@@ -920,6 +924,14 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  /@lucia-auth/adapter-drizzle@1.0.7(lucia@3.1.1):
+    resolution: {integrity: sha512-X/V7fLBca8EC/gPXCntwbQpb0+F9oEuRoHElvsi9rCrdnGhCMNxHgwAvgiQ6pes+rIYpyvx4n3hvjqo/fPo03A==}
+    peerDependencies:
+      lucia: 3.x
+    dependencies:
+      lucia: 3.1.1
+    dev: false
+
   /@melt-ui/svelte@0.76.2(svelte@5.0.0-next.94):
     resolution: {integrity: sha512-7SbOa11tXUS95T3fReL+dwDs5FyJtCEqrqG3inRziDws346SYLsxOQ6HmX+4BkIsQh1R8U3XNa+EMmdMt38lMA==}
     peerDependencies:
@@ -941,7 +953,6 @@ packages:
       '@emnapi/core': 1.1.1
       '@emnapi/runtime': 1.1.1
       '@tybys/wasm-util': 0.8.1
-    dev: true
     optional: true
 
   /@node-rs/argon2-android-arm-eabi@1.7.0:
@@ -959,7 +970,6 @@ packages:
     cpu: [arm]
     os: [android]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-android-arm64@1.7.0:
@@ -977,7 +987,6 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-darwin-arm64@1.7.0:
@@ -995,7 +1004,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-darwin-x64@1.7.0:
@@ -1013,7 +1021,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-freebsd-x64@1.7.0:
@@ -1031,7 +1038,6 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-linux-arm-gnueabihf@1.7.0:
@@ -1049,7 +1055,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-linux-arm64-gnu@1.7.0:
@@ -1067,7 +1072,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-linux-arm64-musl@1.7.0:
@@ -1085,7 +1089,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-linux-x64-gnu@1.7.0:
@@ -1103,7 +1106,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-linux-x64-musl@1.7.0:
@@ -1121,7 +1123,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-wasm32-wasi@1.7.0:
@@ -1144,7 +1145,6 @@ packages:
     requiresBuild: true
     dependencies:
       '@napi-rs/wasm-runtime': 0.1.2
-    dev: true
     optional: true
 
   /@node-rs/argon2-win32-arm64-msvc@1.7.0:
@@ -1162,7 +1162,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-win32-ia32-msvc@1.7.0:
@@ -1180,7 +1179,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2-win32-x64-msvc@1.7.0:
@@ -1198,7 +1196,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/argon2@1.7.0:
@@ -1239,7 +1236,6 @@ packages:
       '@node-rs/argon2-win32-arm64-msvc': 1.7.2
       '@node-rs/argon2-win32-ia32-msvc': 1.7.2
       '@node-rs/argon2-win32-x64-msvc': 1.7.2
-    dev: true
 
   /@node-rs/bcrypt-android-arm-eabi@1.9.0:
     resolution: {integrity: sha512-nOCFISGtnodGHNiLrG0WYLWr81qQzZKYfmwHc7muUeq+KY0sQXyHOwZk9OuNQAWv/lnntmtbwkwT0QNEmOyLvA==}
@@ -1256,7 +1252,6 @@ packages:
     cpu: [arm]
     os: [android]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-android-arm64@1.9.0:
@@ -1274,7 +1269,6 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-darwin-arm64@1.9.0:
@@ -1292,7 +1286,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-darwin-x64@1.9.0:
@@ -1310,7 +1303,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-freebsd-x64@1.9.0:
@@ -1328,7 +1320,6 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-linux-arm-gnueabihf@1.9.0:
@@ -1346,7 +1337,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-linux-arm64-gnu@1.9.0:
@@ -1364,7 +1354,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-linux-arm64-musl@1.9.0:
@@ -1382,7 +1371,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-linux-x64-gnu@1.9.0:
@@ -1400,7 +1388,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-linux-x64-musl@1.9.0:
@@ -1418,7 +1405,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-wasm32-wasi@1.9.0:
@@ -1441,7 +1427,6 @@ packages:
     requiresBuild: true
     dependencies:
       '@napi-rs/wasm-runtime': 0.1.2
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-win32-arm64-msvc@1.9.0:
@@ -1459,7 +1444,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-win32-ia32-msvc@1.9.0:
@@ -1477,7 +1461,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt-win32-x64-msvc@1.9.0:
@@ -1495,7 +1478,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@node-rs/bcrypt@1.9.0:
@@ -1536,7 +1518,6 @@ packages:
       '@node-rs/bcrypt-win32-arm64-msvc': 1.9.2
       '@node-rs/bcrypt-win32-ia32-msvc': 1.9.2
       '@node-rs/bcrypt-win32-x64-msvc': 1.9.2
-    dev: true
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1791,6 +1772,11 @@ packages:
       tslib: 2.6.2
     optional: true
 
+  /@types/better-sqlite3@7.6.9:
+    resolution: {integrity: sha512-FvktcujPDj9XKMJQWFcl2vVl7OdRIqsSRX9b0acWwTmwLK9CF2eqo/FRcmMLNpugKoX/avA6pb7TorDLmpgTnQ==}
+    dependencies:
+      '@types/node': 20.12.4
+
   /@types/cookie@0.6.0:
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
@@ -1806,6 +1792,11 @@ packages:
 
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  /@types/node@20.12.4:
+    resolution: {integrity: sha512-E+Fa9z3wSQpzgYQdYmme5X3OTuejnnTx88A6p6vkkJosR3KBz+HpE3kqNm98VE6cfLFcISx7zW7MsJkH6KwbTw==}
+    dependencies:
+      undici-types: 5.26.5
 
   /@types/pug@2.0.10:
     resolution: {integrity: sha512-Sk/uYFOBAB7mb74XcpizmH0KOR2Pv3D2Hmrh1Dmy5BmK3MpdSa5kqZcg6EKBdklU0bFXX9gCfzvpnyUehrPIuA==}
@@ -2403,7 +2394,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.30.7(better-sqlite3@9.4.5):
+  /drizzle-orm@0.30.7(@types/better-sqlite3@7.6.9)(better-sqlite3@9.4.5):
     resolution: {integrity: sha512-9qefSZQlu2fO2qv24piHyWFWcxcOY15//0v4j8qomMqaxzipNoG+fUBrQ7Ftk7PY7APRbRdn/nkEXWxiI4a8mw==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -2483,6 +2474,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
+      '@types/better-sqlite3': 7.6.9
       better-sqlite3: 9.4.5
     dev: false
 
@@ -3296,7 +3288,6 @@ packages:
     resolution: {integrity: sha512-Ygvgnqq7Ha7lYVaZATPwkPD2s2Qlsm71Z2o0byx/abNBfFldCRow5sNii6RqMsuMpK957RAI3Gw4/aWoagkc7A==}
     dependencies:
       oslo: 1.0.1
-    dev: true
 
   /magic-string@0.30.9:
     resolution: {integrity: sha512-S1+hd+dIrC8EZqKyT9DstTH/0Z+f76kmmvZnkfQVmOpDEF9iVgdYif3Q/pIWHmCoo59bQVGW0kVL3e2nl+9+Sw==}
@@ -3508,7 +3499,6 @@ packages:
     dependencies:
       '@node-rs/argon2': 1.7.2
       '@node-rs/bcrypt': 1.9.2
-    dev: true
 
   /oslo@1.2.0:
     resolution: {integrity: sha512-OoFX6rDsNcOQVAD2gQD/z03u4vEjWZLzJtwkmgfRF+KpQUXwdgEXErD7zNhyowmHwHefP+PM9Pw13pgpHMRlzw==}
@@ -4442,6 +4432,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
+
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
   /update-browserslist-db@1.0.13(browserslist@4.23.0):
     resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
