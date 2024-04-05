@@ -12,9 +12,6 @@
 	});
 
 	const { form: registerForm, enhance, errors } = formSchema;
-
-	$effect(() => console.log(form));
-  $effect(() => console.log($errors))
 </script>
 
 <main class={cn('h-full', 'flex items-center justify-center')}>
