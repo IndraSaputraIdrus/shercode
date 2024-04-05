@@ -29,7 +29,6 @@ export const actions: Actions = {
 
     if (!existingUser) {
       return setError(form, "", "Invalid username or password")
-      t
     }
 
     const session = await lucia.createSession(existingUser.id, {})
