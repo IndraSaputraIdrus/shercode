@@ -6,7 +6,7 @@
 	import * as Form from '$lib/components/ui/form';
 	import { Input } from '$lib/components/ui/input/';
 
-	const { data, form } = $props();
+	const { data } = $props();
 	const formSchema = superForm(data.form, {
 		validators: zodClient(registerSchema)
 	});
@@ -59,7 +59,7 @@
 					{/if}
 				</div>
 
-				<Form.Button class="w-full">Login</Form.Button>
+				<Form.Button class="w-full">Sign up</Form.Button>
 			</div>
 		</form>
 	</div>

@@ -5,6 +5,7 @@
 	import { zodClient } from 'sveltekit-superforms/adapters';
 	import * as Form from '$lib/components/ui/form';
 	import { Input } from '$lib/components/ui/input/';
+	import { Button } from '$lib/components/ui/button';
 
 	const { data } = $props();
 	const formSchema = superForm(data.form, {
@@ -33,7 +34,9 @@
 					</Form.Control>
 					<Form.FieldErrors />
 				</Form.Field>
-				<Form.Button class="w-full">Login</Form.Button>
+				<Form.Button>Sign in</Form.Button>
+				<Button variant="outline" class="ml-3" href="/register">
+				Sign up</Button>
 			</div>
 		</form>
 	</div>
