@@ -20,3 +20,4 @@ export const posts = sqliteTable("posts", {
   title: text("title", {length: 255}).notNull(),
   content: text("content").notNull()
 })
+
