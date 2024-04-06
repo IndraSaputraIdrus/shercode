@@ -23,6 +23,9 @@ dependencies:
   formsnap:
     specifier: ^1.0.0
     version: 1.0.0(svelte@5.0.0-next.94)(sveltekit-superforms@2.12.2)
+  lucide-svelte:
+    specifier: ^0.365.0
+    version: 0.365.0(svelte@5.0.0-next.94)
   oslo:
     specifier: ^1.2.0
     version: 1.2.0
@@ -3288,6 +3291,14 @@ packages:
     resolution: {integrity: sha512-Ygvgnqq7Ha7lYVaZATPwkPD2s2Qlsm71Z2o0byx/abNBfFldCRow5sNii6RqMsuMpK957RAI3Gw4/aWoagkc7A==}
     dependencies:
       oslo: 1.0.1
+
+  /lucide-svelte@0.365.0(svelte@5.0.0-next.94):
+    resolution: {integrity: sha512-px3SDEGepR4sICxU38B9VFJJHglZjWnucTlZbbOgySxkAuZRr+b9CHwTDJKA2Xzs7dSjFKaasequwDg0SRIfiA==}
+    peerDependencies:
+      svelte: ^3 || ^4 || ^5.0.0-next.42
+    dependencies:
+      svelte: 5.0.0-next.94
+    dev: false
 
   /magic-string@0.30.9:
     resolution: {integrity: sha512-S1+hd+dIrC8EZqKyT9DstTH/0Z+f76kmmvZnkfQVmOpDEF9iVgdYif3Q/pIWHmCoo59bQVGW0kVL3e2nl+9+Sw==}

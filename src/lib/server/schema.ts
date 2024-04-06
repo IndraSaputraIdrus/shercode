@@ -13,3 +13,10 @@ export const sessions = sqliteTable("session", {
   userId: text("user_id").notNull().references(() => users.id),
   expiresAt: integer("expires_at").notNull()
 })
+
+export const posts = sqliteTable("posts", {
+  id: text("id").notNull().primaryKey(),
+  userId: text("user_id").notNull().references(() => users.id),
+  title: text("title", {length: 255}).notNull(),
+  content: text("content").notNull()
+})
