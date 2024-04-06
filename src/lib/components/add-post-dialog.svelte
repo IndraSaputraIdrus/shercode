@@ -15,7 +15,12 @@
 
 	let { open, form: formData }: Props = $props();
 	const createSchema = superForm(formData, {
-		validators: zodClient(postSchema)
+		validators: zodClient(postSchema),
+    onUpdated: ({form: updateForm}) => {
+      if(!updateForm.valid) return
+
+      $open = false
+    }
 	});
 
 	const { form: postFormData, enhance } = createSchema;
@@ -27,7 +32,7 @@
 			<Dialog.Title asChild>
         <h1 class="mb-6 font-semibold text-2xl">Create new post</h1>
       </Dialog.Title>
-			<form use:enhance method="POST" class="space-y-5">
+			<form action="?/createPost" use:enhance method="POST" class="space-y-5">
 				<Form.Field form={createSchema} name="title">
 					<Form.Control let:attrs>
 						<Form.Label>Title</Form.Label>
