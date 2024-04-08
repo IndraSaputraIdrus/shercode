@@ -9,7 +9,7 @@
   </span>
 </h1>
 <div class="grid grid-cols-1 gap-5 pb-5">
-  {#each { length: 5 } as _}
-    <CardPost />
+  {#each data.posts as post}
+    <CardPost postData={post} />
   {/each}
 </div>

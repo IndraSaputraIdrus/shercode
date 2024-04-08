@@ -14,9 +14,12 @@ export const load: PageServerLoad = async (event) => {
 
   const createFormSchema = await superValidate(zod(postSchema))
 
+  const postsData = db.select().from(posts).all()
+
   return {
     user: event.locals.user,
     session: event.locals.session,
+    posts: postsData,
     createFormSchema
   }
 }
@@ -33,6 +36,7 @@ export const actions: Actions = {
     }
 
     const postId = generateId(15)
+
     db.insert(posts).values({
       id: postId,
       userId: event.locals.user.id,
