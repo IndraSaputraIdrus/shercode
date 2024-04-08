@@ -6,6 +6,7 @@
 		postData: {
 			title: string;
 			content: string;
+			id: string;
 		};
 	};
 
@@ -15,7 +16,7 @@
 <Card.Root>
 	<Card.Header class="flex flex-row items-center justify-between">
 		<Card.Title>{postData.title}</Card.Title>
-		<Menu />
+		<Menu id={postData.id} />
 	</Card.Header>
 	<Card.Content>
 		<p>{postData.content}</p>

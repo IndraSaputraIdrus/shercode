@@ -35,8 +35,7 @@
 					<Form.FieldErrors />
 				</Form.Field>
 				<Form.Button>Sign in</Form.Button>
-				<Button variant="outline" class="ml-3" href="/register">
-				Sign up</Button>
+				<Button variant="outline" class="ml-3" href="/register">Sign up</Button>
 			</div>
 		</form>
 	</div>
